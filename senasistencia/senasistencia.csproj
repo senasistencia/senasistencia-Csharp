@@ -84,6 +84,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -137,6 +139,28 @@
     <Content Include="img\senasistencia.png" />
     <Content Include="js\app.js" />
     <Content Include="js\materialize.js" />
+    <EntityDeploy Include="Models\FICHAMODELO.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>FICHAMODELO.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\FICHAMODELO.edmx.diagram">
+      <DependentUpon>FICHAMODELO.edmx</DependentUpon>
+    </Content>
+    <None Include="scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Models\FICHAMODELO.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FICHAMODELO.edmx</DependentUpon>
+      <LastGenOutput>FICHAMODELO.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\FICHAMODELO.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FICHAMODELO.edmx</DependentUpon>
+      <LastGenOutput>FICHAMODELO.cs</LastGenOutput>
+    </Content>
+    <Content Include="scripts\jquery.validate.js" />
+    <Content Include="scripts\jquery.validate.min.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Views\Cuentas\Login.cshtml" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
@@ -151,9 +175,28 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CuentasController.cs" />
+    <Compile Include="Controllers\FichaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FICHA.cs">
+      <DependentUpon>FICHAMODELO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FICHAMODELO.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FICHAMODELO.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FICHAMODELO.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FICHAMODELO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FICHAMODELO.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FICHAMODELO.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -180,6 +223,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Ficha\Index.cshtml" />
+    <Content Include="Views\Ficha\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -189,7 +234,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

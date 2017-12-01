@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SENASISTENCIAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="FICHA">
+    <Key>
+      <PropertyRef Name="ID_Ficha" />
+    </Key>
+    <Property Name="ID_Ficha" Type="int" Nullable="false" />
+    <Property Name="Numeroficha" Type="int" />
+    <Property Name="Centro_de_formacion" Type="varchar" MaxLength="35" />
+    <Property Name="Sede" Type="varchar" MaxLength="15" />
+    <Property Name="Ambiente" Type="varchar" MaxLength="10" />
+    <Property Name="Trimestre" Type="varchar" MaxLength="10" />
+    <Property Name="Jornada" Type="varchar" MaxLength="10" />
+    <Property Name="Instructor" Type="varchar" MaxLength="35" />
+    <Property Name="EstadoFicha" Type="int" />
+    <Property Name="Fecha_Creacion" Type="datetime" />
+    <Property Name="Fecha_Inactivacion" Type="datetime" />
+    <Property Name="Aprendiz" Type="varchar" MaxLength="35" />
+  </EntityType>
+  <EntityContainer Name="SENASISTENCIAModelStoreContainer">
+    <EntitySet Name="FICHA" EntityType="Self.FICHA" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

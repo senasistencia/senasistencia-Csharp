@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SENASISTENCIAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="FICHA">
+    <Key>
+      <PropertyRef Name="ID_Ficha" />
+    </Key>
+    <Property Name="ID_Ficha" Type="Int32" Nullable="false" />
+    <Property Name="Numeroficha" Type="Int32" />
+    <Property Name="Centro_de_formacion" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="Sede" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Ambiente" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Trimestre" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Jornada" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Instructor" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="EstadoFicha" Type="Int32" />
+    <Property Name="Fecha_Creacion" Type="DateTime" Precision="3" />
+    <Property Name="Fecha_Inactivacion" Type="DateTime" Precision="3" />
+    <Property Name="Aprendiz" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="SENASISTENCIAEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="FICHA" EntityType="Self.FICHA" />
+  </EntityContainer>
+</Schema>
