@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SENASISTENCIAModelStoreContainer" CdmEntityContainer="SENASISTENCIAEntities">
+    <EntitySetMapping Name="FICHA">
+      <EntityTypeMapping TypeName="SENASISTENCIAModel.FICHA">
+        <MappingFragment StoreEntitySet="FICHA">
+          <ScalarProperty Name="ID_Ficha" ColumnName="ID_Ficha" />
+          <ScalarProperty Name="Numeroficha" ColumnName="Numeroficha" />
+          <ScalarProperty Name="Centro_de_formacion" ColumnName="Centro_de_formacion" />
+          <ScalarProperty Name="Sede" ColumnName="Sede" />
+          <ScalarProperty Name="Ambiente" ColumnName="Ambiente" />
+          <ScalarProperty Name="Trimestre" ColumnName="Trimestre" />
+          <ScalarProperty Name="Jornada" ColumnName="Jornada" />
+          <ScalarProperty Name="Instructor" ColumnName="Instructor" />
+          <ScalarProperty Name="EstadoFicha" ColumnName="EstadoFicha" />
+          <ScalarProperty Name="Fecha_Creacion" ColumnName="Fecha_Creacion" />
+          <ScalarProperty Name="Fecha_Inactivacion" ColumnName="Fecha_Inactivacion" />
+          <ScalarProperty Name="Aprendiz" ColumnName="Aprendiz" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

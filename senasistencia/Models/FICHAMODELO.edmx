@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SENASISTENCIAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="FICHA">
+          <Key>
+            <PropertyRef Name="ID_Ficha" />
+          </Key>
+          <Property Name="ID_Ficha" Type="int" Nullable="false" />
+          <Property Name="Numeroficha" Type="int" />
+          <Property Name="Centro_de_formacion" Type="varchar" MaxLength="35" />
+          <Property Name="Sede" Type="varchar" MaxLength="15" />
+          <Property Name="Ambiente" Type="varchar" MaxLength="10" />
+          <Property Name="Trimestre" Type="varchar" MaxLength="10" />
+          <Property Name="Jornada" Type="varchar" MaxLength="10" />
+          <Property Name="Instructor" Type="varchar" MaxLength="35" />
+          <Property Name="EstadoFicha" Type="int" />
+          <Property Name="Fecha_Creacion" Type="datetime" />
+          <Property Name="Fecha_Inactivacion" Type="datetime" />
+          <Property Name="Aprendiz" Type="varchar" MaxLength="35" />
+        </EntityType>
+        <EntityContainer Name="SENASISTENCIAModelStoreContainer">
+          <EntitySet Name="FICHA" EntityType="Self.FICHA" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SENASISTENCIAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="FICHA">
+          <Key>
+            <PropertyRef Name="ID_Ficha" />
+          </Key>
+          <Property Name="ID_Ficha" Type="Int32" Nullable="false" />
+          <Property Name="Numeroficha" Type="Int32" />
+          <Property Name="Centro_de_formacion" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="Sede" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Ambiente" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Trimestre" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Jornada" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Instructor" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="EstadoFicha" Type="Int32" />
+          <Property Name="Fecha_Creacion" Type="DateTime" Precision="3" />
+          <Property Name="Fecha_Inactivacion" Type="DateTime" Precision="3" />
+          <Property Name="Aprendiz" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="SENASISTENCIAEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="FICHA" EntityType="Self.FICHA" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SENASISTENCIAModelStoreContainer" CdmEntityContainer="SENASISTENCIAEntities">
+          <EntitySetMapping Name="FICHA">
+            <EntityTypeMapping TypeName="SENASISTENCIAModel.FICHA">
+              <MappingFragment StoreEntitySet="FICHA">
+                <ScalarProperty Name="ID_Ficha" ColumnName="ID_Ficha" />
+                <ScalarProperty Name="Numeroficha" ColumnName="Numeroficha" />
+                <ScalarProperty Name="Centro_de_formacion" ColumnName="Centro_de_formacion" />
+                <ScalarProperty Name="Sede" ColumnName="Sede" />
+                <ScalarProperty Name="Ambiente" ColumnName="Ambiente" />
+                <ScalarProperty Name="Trimestre" ColumnName="Trimestre" />
+                <ScalarProperty Name="Jornada" ColumnName="Jornada" />
+                <ScalarProperty Name="Instructor" ColumnName="Instructor" />
+                <ScalarProperty Name="EstadoFicha" ColumnName="EstadoFicha" />
+                <ScalarProperty Name="Fecha_Creacion" ColumnName="Fecha_Creacion" />
+                <ScalarProperty Name="Fecha_Inactivacion" ColumnName="Fecha_Inactivacion" />
+                <ScalarProperty Name="Aprendiz" ColumnName="Aprendiz" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
