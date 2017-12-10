@@ -1,0 +1,120 @@
+﻿@model senasistencia.Models.cliente
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.cargo.Tipo_Cargo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cargo.Tipo_Cargo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.perfil.Perfil1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.perfil.Perfil1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tipo_documento.Nombre_TipoDeDocumento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipo_documento.Nombre_TipoDeDocumento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimerNombre_Cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrimerNombre_Cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SegundoNombre_Cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SegundoNombre_Cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimerApellido_Cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrimerApellido_Cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SegundoApellido_Cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SegundoApellido_Cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Correo_Cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Correo_Cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefono_Cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefono_Cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado_Cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado_Cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDeCreacion_Cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDeCreacion_Cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDeInactivacion_Cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDeInactivacion_Cliente)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

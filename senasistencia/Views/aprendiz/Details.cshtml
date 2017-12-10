@@ -1,0 +1,90 @@
+﻿@model senasistencia.Models.aprendiz
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>aprendiz</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ficha.ID_Ficha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ficha.ID_Ficha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tipo_documento.Nombre_TipoDeDocumento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipo_documento.Nombre_TipoDeDocumento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre_Aprendiz)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre_Aprendiz)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellido_Aprendiiz)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellido_Aprendiiz)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Correo_Aprendiz)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Correo_Aprendiz)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefono_Aprendiz)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefono_Aprendiz)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado_Aprendiz)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado_Aprendiz)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDeCreacion_Aprendiz)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDeCreacion_Aprendiz)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDeInactivacion_Aprendiz)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDeInactivacion_Aprendiz)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_DocumentoAprendiz }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

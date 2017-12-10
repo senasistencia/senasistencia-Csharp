@@ -1,0 +1,50 @@
+﻿@model senasistencia.Models.trimestre
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>trimestre</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Num_Trimestre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Num_Trimestre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado_Trimestre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado_Trimestre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDeCreacion_Trimestre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDeCreacion_Trimestre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDeInactivacion_Trimestre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDeInactivacion_Trimestre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_Trimestre }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,72 @@
+﻿@model senasistencia.Models.Formato_Ftp
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Formato_Ftp</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.asistencia.ID_Asistencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.asistencia.ID_Asistencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre_Formato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre_Formato)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Url_Ftp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Url_Ftp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado_Formato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado_Formato)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDeCreacion_Formato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDeCreacion_Formato)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDeInactivacion_Formato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDeInactivacion_Formato)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

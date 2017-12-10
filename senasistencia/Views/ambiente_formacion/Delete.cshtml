@@ -1,0 +1,64 @@
+﻿@model senasistencia.Models.ambiente_formacion
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ambiente_formacion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.sede.Nombre_Sede)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sede.Nombre_Sede)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Num_Ambiente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Num_Ambiente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado_Ambiente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado_Ambiente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDeCreacion_Ambiente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDeCreacion_Ambiente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDeInactivacion_Ambiente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDeInactivacion_Ambiente)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

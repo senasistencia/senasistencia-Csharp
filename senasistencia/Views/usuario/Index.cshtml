@@ -1,0 +1,63 @@
+﻿@model IEnumerable<senasistencia.Models.usuario>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.cliente.PrimerNombre_Cliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password_Hash)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Caducidad_Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado_Usuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaDeCreacion_Usuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaDeInactivacion_Usuario)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.cliente.PrimerNombre_Cliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password_Hash)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Caducidad_Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado_Usuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaDeCreacion_Usuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaDeInactivacion_Usuario)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_Usuario }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_Usuario }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_Usuario })
+        </td>
+    </tr>
+}
+
+</table>

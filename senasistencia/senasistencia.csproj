@@ -151,11 +151,49 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ambiente_formacionController.cs" />
+    <Compile Include="Controllers\aprendizController.cs" />
+    <Compile Include="Controllers\asistenciaController.cs" />
+    <Compile Include="Controllers\cargoController.cs" />
+    <Compile Include="Controllers\centro_formacionController.cs" />
+    <Compile Include="Controllers\clienteController.cs" />
     <Compile Include="Controllers\CuentasController.cs" />
+    <Compile Include="Controllers\excusaController.cs" />
+    <Compile Include="Controllers\fichaController.cs" />
+    <Compile Include="Controllers\Formato_FtpController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\jornadaController.cs" />
+    <Compile Include="Controllers\notificacionController.cs" />
+    <Compile Include="Controllers\password_tokenController.cs" />
+    <Compile Include="Controllers\perfilController.cs" />
+    <Compile Include="Controllers\programa_formacionController.cs" />
+    <Compile Include="Controllers\sedeController.cs" />
+    <Compile Include="Controllers\tipo_documentoController.cs" />
+    <Compile Include="Controllers\trimestreController.cs" />
+    <Compile Include="Controllers\usuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ambiente_formacion.cs" />
+    <Compile Include="Models\aprendiz.cs" />
+    <Compile Include="Models\asistencia.cs" />
+    <Compile Include="Models\cargo.cs" />
+    <Compile Include="Models\centro_formacion.cs" />
+    <Compile Include="Models\cliente.cs" />
+    <Compile Include="Models\DBContext.cs" />
+    <Compile Include="Models\excusa.cs" />
+    <Compile Include="Models\ficha.cs" />
+    <Compile Include="Models\Formato_Ftp.cs" />
+    <Compile Include="Models\jornada.cs" />
+    <Compile Include="Models\notificacion.cs" />
+    <Compile Include="Models\password_token.cs" />
+    <Compile Include="Models\perfil.cs" />
+    <Compile Include="Models\programa_formacion.cs" />
+    <Compile Include="Models\sede.cs" />
+    <Compile Include="Models\sysdiagrams.cs" />
+    <Compile Include="Models\tipo_documento.cs" />
+    <Compile Include="Models\trimestre.cs" />
+    <Compile Include="Models\usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -178,6 +216,96 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\ambiente_formacion\Create.cshtml" />
+    <Content Include="Views\ambiente_formacion\Delete.cshtml" />
+    <Content Include="Views\ambiente_formacion\Details.cshtml" />
+    <Content Include="Views\ambiente_formacion\Edit.cshtml" />
+    <Content Include="Views\ambiente_formacion\Index.cshtml" />
+    <Content Include="Views\aprendiz\Create.cshtml" />
+    <Content Include="Views\aprendiz\Delete.cshtml" />
+    <Content Include="Views\aprendiz\Details.cshtml" />
+    <Content Include="Views\aprendiz\Edit.cshtml" />
+    <Content Include="Views\aprendiz\Index.cshtml" />
+    <Content Include="Views\asistencia\Create.cshtml" />
+    <Content Include="Views\asistencia\Delete.cshtml" />
+    <Content Include="Views\asistencia\Details.cshtml" />
+    <Content Include="Views\asistencia\Edit.cshtml" />
+    <Content Include="Views\asistencia\Index.cshtml" />
+    <Content Include="Views\cargo\Create.cshtml" />
+    <Content Include="Views\cargo\Delete.cshtml" />
+    <Content Include="Views\cargo\Details.cshtml" />
+    <Content Include="Views\cargo\Edit.cshtml" />
+    <Content Include="Views\cargo\Index.cshtml" />
+    <Content Include="Views\centro_formacion\Create.cshtml" />
+    <Content Include="Views\centro_formacion\Delete.cshtml" />
+    <Content Include="Views\centro_formacion\Details.cshtml" />
+    <Content Include="Views\centro_formacion\Edit.cshtml" />
+    <Content Include="Views\centro_formacion\Index.cshtml" />
+    <Content Include="Views\cliente\Create.cshtml" />
+    <Content Include="Views\cliente\Delete.cshtml" />
+    <Content Include="Views\cliente\Details.cshtml" />
+    <Content Include="Views\cliente\Edit.cshtml" />
+    <Content Include="Views\cliente\Index.cshtml" />
+    <Content Include="Views\excusa\Create.cshtml" />
+    <Content Include="Views\excusa\Delete.cshtml" />
+    <Content Include="Views\excusa\Details.cshtml" />
+    <Content Include="Views\excusa\Edit.cshtml" />
+    <Content Include="Views\excusa\Index.cshtml" />
+    <Content Include="Views\ficha\Create.cshtml" />
+    <Content Include="Views\ficha\Delete.cshtml" />
+    <Content Include="Views\ficha\Details.cshtml" />
+    <Content Include="Views\ficha\Edit.cshtml" />
+    <Content Include="Views\ficha\Index.cshtml" />
+    <Content Include="Views\Formato_Ftp\Create.cshtml" />
+    <Content Include="Views\Formato_Ftp\Delete.cshtml" />
+    <Content Include="Views\Formato_Ftp\Details.cshtml" />
+    <Content Include="Views\Formato_Ftp\Edit.cshtml" />
+    <Content Include="Views\Formato_Ftp\Index.cshtml" />
+    <Content Include="Views\jornada\Create.cshtml" />
+    <Content Include="Views\jornada\Delete.cshtml" />
+    <Content Include="Views\jornada\Details.cshtml" />
+    <Content Include="Views\jornada\Edit.cshtml" />
+    <Content Include="Views\jornada\Index.cshtml" />
+    <Content Include="Views\notificacion\Create.cshtml" />
+    <Content Include="Views\notificacion\Delete.cshtml" />
+    <Content Include="Views\notificacion\Details.cshtml" />
+    <Content Include="Views\notificacion\Edit.cshtml" />
+    <Content Include="Views\notificacion\Index.cshtml" />
+    <Content Include="Views\password_token\Create.cshtml" />
+    <Content Include="Views\password_token\Delete.cshtml" />
+    <Content Include="Views\password_token\Details.cshtml" />
+    <Content Include="Views\password_token\Edit.cshtml" />
+    <Content Include="Views\password_token\Index.cshtml" />
+    <Content Include="Views\perfil\Create.cshtml" />
+    <Content Include="Views\perfil\Delete.cshtml" />
+    <Content Include="Views\perfil\Details.cshtml" />
+    <Content Include="Views\perfil\Edit.cshtml" />
+    <Content Include="Views\perfil\Index.cshtml" />
+    <Content Include="Views\programa_formacion\Create.cshtml" />
+    <Content Include="Views\programa_formacion\Delete.cshtml" />
+    <Content Include="Views\programa_formacion\Details.cshtml" />
+    <Content Include="Views\programa_formacion\Edit.cshtml" />
+    <Content Include="Views\programa_formacion\Index.cshtml" />
+    <Content Include="Views\sede\Create.cshtml" />
+    <Content Include="Views\sede\Delete.cshtml" />
+    <Content Include="Views\sede\Details.cshtml" />
+    <Content Include="Views\sede\Edit.cshtml" />
+    <Content Include="Views\sede\Index.cshtml" />
+    <Content Include="Views\tipo_documento\Create.cshtml" />
+    <Content Include="Views\tipo_documento\Delete.cshtml" />
+    <Content Include="Views\tipo_documento\Details.cshtml" />
+    <Content Include="Views\tipo_documento\Edit.cshtml" />
+    <Content Include="Views\tipo_documento\Index.cshtml" />
+    <Content Include="Views\trimestre\Create.cshtml" />
+    <Content Include="Views\trimestre\Delete.cshtml" />
+    <Content Include="Views\trimestre\Details.cshtml" />
+    <Content Include="Views\trimestre\Edit.cshtml" />
+    <Content Include="Views\trimestre\Index.cshtml" />
+    <Content Include="Views\usuario\Create.cshtml" />
+    <Content Include="Views\usuario\Delete.cshtml" />
+    <Content Include="Views\usuario\Details.cshtml" />
+    <Content Include="Views\usuario\Edit.cshtml" />
+    <Content Include="Views\usuario\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -187,7 +315,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Views\DisplayTemplates\" />
+    <Folder Include="Views\EditorTemplates\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

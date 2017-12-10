@@ -1,0 +1,81 @@
+﻿@model IEnumerable<senasistencia.Models.aprendiz>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ficha.ID_Ficha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tipo_documento.Nombre_TipoDeDocumento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre_Aprendiz)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Apellido_Aprendiiz)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Correo_Aprendiz)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefono_Aprendiz)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado_Aprendiz)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaDeCreacion_Aprendiz)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaDeInactivacion_Aprendiz)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ficha.ID_Ficha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipo_documento.Nombre_TipoDeDocumento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre_Aprendiz)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Apellido_Aprendiiz)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Correo_Aprendiz)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefono_Aprendiz)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado_Aprendiz)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaDeCreacion_Aprendiz)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaDeInactivacion_Aprendiz)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_DocumentoAprendiz }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_DocumentoAprendiz }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_DocumentoAprendiz })
+        </td>
+    </tr>
+}
+
+</table>

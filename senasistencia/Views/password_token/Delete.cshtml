@@ -1,0 +1,64 @@
+﻿@model senasistencia.Models.password_token
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>password_token</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.usuario.Password_Hash)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.usuario.Password_Hash)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Token_Hash)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Token_Hash)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado_Token)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado_Token)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDeCreacion_Token)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDeCreacion_Token)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDeInactivacion_Token)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDeInactivacion_Token)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

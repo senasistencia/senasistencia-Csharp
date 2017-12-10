@@ -1,0 +1,75 @@
+﻿@model IEnumerable<senasistencia.Models.ficha>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ambiente_formacion.ID_Ambiente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.jornada.Descripcion_Jornada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.programa_formacion.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.trimestre.ID_Trimestre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Num_Ficha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaDeCreacion_Ficha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaDeInactivacion_Ficha)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ambiente_formacion.ID_Ambiente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.jornada.Descripcion_Jornada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.programa_formacion.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.trimestre.ID_Trimestre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Num_Ficha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaDeCreacion_Ficha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaDeInactivacion_Ficha)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_Ficha }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_Ficha }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_Ficha })
+        </td>
+    </tr>
+}
+
+</table>

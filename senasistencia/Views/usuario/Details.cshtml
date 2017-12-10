@@ -1,0 +1,66 @@
+﻿@model senasistencia.Models.usuario
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.cliente.PrimerNombre_Cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cliente.PrimerNombre_Cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password_Hash)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password_Hash)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Caducidad_Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Caducidad_Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado_Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado_Usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDeCreacion_Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDeCreacion_Usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDeInactivacion_Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDeInactivacion_Usuario)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_Usuario }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

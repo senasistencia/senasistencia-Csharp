@@ -1,0 +1,58 @@
+﻿@model senasistencia.Models.ambiente_formacion
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ambiente_formacion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.sede.Nombre_Sede)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sede.Nombre_Sede)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Num_Ambiente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Num_Ambiente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado_Ambiente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado_Ambiente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDeCreacion_Ambiente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDeCreacion_Ambiente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDeInactivacion_Ambiente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDeInactivacion_Ambiente)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_Ambiente }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

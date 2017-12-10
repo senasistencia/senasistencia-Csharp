@@ -1,0 +1,66 @@
+﻿@model senasistencia.Models.Formato_Ftp
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Formato_Ftp</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.asistencia.ID_Asistencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.asistencia.ID_Asistencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre_Formato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre_Formato)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Url_Ftp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Url_Ftp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado_Formato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado_Formato)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDeCreacion_Formato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDeCreacion_Formato)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDeInactivacion_Formato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDeInactivacion_Formato)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_formato }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

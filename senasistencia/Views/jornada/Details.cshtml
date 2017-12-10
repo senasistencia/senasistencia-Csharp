@@ -1,0 +1,50 @@
+﻿@model senasistencia.Models.jornada
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>jornada</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion_Jornada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion_Jornada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado_Jornada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado_Jornada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDeCreacion_Jornada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDeCreacion_Jornada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDeInactivacion_Jornada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDeInactivacion_Jornada)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_Jornada }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<senasistencia.Models.ambiente_formacion>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.sede.Nombre_Sede)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Num_Ambiente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado_Ambiente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaDeCreacion_Ambiente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaDeInactivacion_Ambiente)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.sede.Nombre_Sede)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Num_Ambiente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado_Ambiente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaDeCreacion_Ambiente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaDeInactivacion_Ambiente)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_Ambiente }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_Ambiente }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_Ambiente })
+        </td>
+    </tr>
+}
+
+</table>

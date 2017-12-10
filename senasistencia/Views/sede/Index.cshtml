@@ -1,0 +1,69 @@
+﻿@model IEnumerable<senasistencia.Models.sede>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.centro_formacion.Nombre_Centro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre_Sede)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Direccion_Sede)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado_sede)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaDeCreacion_Sede)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaDeInactivacion_Sede)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.centro_formacion.Nombre_Centro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre_Sede)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Direccion_Sede)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado_sede)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaDeCreacion_Sede)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaDeInactivacion_Sede)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_Sede }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_Sede }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_Sede })
+        </td>
+    </tr>
+}
+
+</table>

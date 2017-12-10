@@ -1,0 +1,74 @@
+﻿@model senasistencia.Models.sede
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>sede</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.centro_formacion.Nombre_Centro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.centro_formacion.Nombre_Centro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre_Sede)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre_Sede)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Direccion_Sede)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direccion_Sede)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado_sede)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado_sede)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDeCreacion_Sede)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDeCreacion_Sede)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDeInactivacion_Sede)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDeInactivacion_Sede)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_Sede }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

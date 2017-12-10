@@ -1,0 +1,51 @@
+﻿@model IEnumerable<senasistencia.Models.programa_formacion>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado_Programa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaDeCreacion_Programa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaDeInactivacion_Programa)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado_Programa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaDeCreacion_Programa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaDeInactivacion_Programa)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_Programa }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_Programa }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_Programa })
+        </td>
+    </tr>
+}
+
+</table>

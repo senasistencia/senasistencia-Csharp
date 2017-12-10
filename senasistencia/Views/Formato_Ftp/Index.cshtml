@@ -1,0 +1,63 @@
+﻿@model IEnumerable<senasistencia.Models.Formato_Ftp>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.asistencia.ID_Asistencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre_Formato)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Url_Ftp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado_Formato)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaDeCreacion_Formato)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaDeInactivacion_Formato)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.asistencia.ID_Asistencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre_Formato)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Url_Ftp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado_Formato)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaDeCreacion_Formato)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaDeInactivacion_Formato)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_formato }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_formato }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_formato })
+        </td>
+    </tr>
+}
+
+</table>

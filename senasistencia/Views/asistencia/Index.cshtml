@@ -1,0 +1,63 @@
+﻿@model IEnumerable<senasistencia.Models.asistencia>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.aprendiz.Nombre_Aprendiz)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion_Asistencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha_Asistencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado_Asistencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaDeCreacion_Asistencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaDeInactivacion_Asistencia)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.aprendiz.Nombre_Aprendiz)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion_Asistencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fecha_Asistencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado_Asistencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaDeCreacion_Asistencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaDeInactivacion_Asistencia)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_Asistencia }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_Asistencia }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_Asistencia })
+        </td>
+    </tr>
+}
+
+</table>

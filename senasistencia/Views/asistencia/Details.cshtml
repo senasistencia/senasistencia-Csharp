@@ -1,0 +1,66 @@
+﻿@model senasistencia.Models.asistencia
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>asistencia</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.aprendiz.Nombre_Aprendiz)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.aprendiz.Nombre_Aprendiz)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion_Asistencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion_Asistencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_Asistencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_Asistencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado_Asistencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado_Asistencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDeCreacion_Asistencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDeCreacion_Asistencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDeInactivacion_Asistencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaDeInactivacion_Asistencia)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_Asistencia }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

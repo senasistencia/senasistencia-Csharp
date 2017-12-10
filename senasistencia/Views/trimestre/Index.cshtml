@@ -1,0 +1,51 @@
+﻿@model IEnumerable<senasistencia.Models.trimestre>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Num_Trimestre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado_Trimestre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaDeCreacion_Trimestre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaDeInactivacion_Trimestre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Num_Trimestre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado_Trimestre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaDeCreacion_Trimestre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaDeInactivacion_Trimestre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_Trimestre }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_Trimestre }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_Trimestre })
+        </td>
+    </tr>
+}
+
+</table>
