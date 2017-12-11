@@ -1,15 +1,15 @@
 ﻿@model IEnumerable<senasistencia.Models.ambiente_formacion>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Ambientes de fromacion";
 }
 
-<h2>Index</h2>
+<h2>Tus Ambientes</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table class="highlight bordered responsive-table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.sede.Nombre_Sede)
@@ -47,9 +47,9 @@
             @Html.DisplayFor(modelItem => item.FechaDeInactivacion_Ambiente)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID_Ambiente }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID_Ambiente }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID_Ambiente })
+            @Html.ActionLink("Editar", "Edit", new { id = item.ID_Ambiente })|
+            @Html.ActionLink("Detalles", "Details", new { id = item.ID_Ambiente })|
+            @Html.ActionLink("Eliminar", "Delete", new { id = item.ID_Ambiente })
         </td>
     </tr>
 }

@@ -11,7 +11,7 @@
 {
     @Html.AntiForgeryToken()
     
-    <div class="form-horizontal">
+    <div class="">
         <h4>sede</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -48,14 +48,13 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Estado_sede, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.Estado_sede)
-                    @Html.ValidationMessageFor(model => model.Estado_sede, "", new { @class = "text-danger" })
-                </div>
-            </div>
-        </div>
+                       
+                    
+            <input class="filled-in" data-val="true" data-val-required="El campo Estado sede es obligatorio." id="Estado_sede" name="Estado_sede" type="checkbox" value="true">
+            @Html.LabelFor(model => model.Estado_sede, htmlAttributes: new { @class = "" })
+               </div>
+            
+     
 
         <div class="form-group">
             @Html.LabelFor(model => model.FechaDeCreacion_Sede, htmlAttributes: new { @class = "control-label col-md-2" })

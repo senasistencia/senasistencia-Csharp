@@ -1,0 +1,13 @@
+﻿@model DateTime?
+
+@if (!Model.HasValue)
+{
+   
+}
+else
+{
+    <span>@Model.Value.ToString("dd/MM/yyyy")</span>
+}
+
+
+    
