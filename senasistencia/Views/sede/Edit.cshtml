@@ -1,90 +1,61 @@
 ﻿@model senasistencia.Models.sede
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Editar";
 }
 
-<h2>Edit</h2>
+<div class="col s12 m8 push-m2 card-panel margen">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+    <div class="row formulario">
+
+    <h4 class="center-align">Sede</h4>
+    <div class="divider"></div>
+    <div class="section">
+           @Html.HiddenFor(model => model.ID_Sede)
+          <div class="col s12 m10 offset-m1 input-field">
+             @Html.EditorFor(model => model.Nombre_Sede, new { htmlAttributes = new { @class = "" } })
+             @Html.LabelFor(model => model.Nombre_Sede, htmlAttributes: new { @class = "" })
+          </div>
+
+          <div class="col s12 m10 offset-m1 input-field">
+             @Html.EditorFor(model => model.Direccion_Sede, new { htmlAttributes = new { @class = "" } })   
+             @Html.LabelFor(model => model.Direccion_Sede, htmlAttributes: new { @class = "" })
+          </div>
+          <div class="col s12 m10 offset-m1 input-field">
+             @Html.EditorFor(model => model.Telefono, new { htmlAttributes = new { @class = "" } })
+             @Html.LabelFor(model => model.Telefono, htmlAttributes: new { @class = "" })
+          </div>
+
+          <div class="col s12 m10 offset-m1 input-field">
+             @Html.DropDownList("ID_Centro", null, htmlAttributes: new { @class = "" })
+             @Html.LabelFor(model => model.ID_Centro, "ID_Centro", htmlAttributes: new { @class = "" })   
+          </div>
+          @Html.LabelFor(model => model.FechaDeCreacion_Sede, htmlAttributes: new { @class = "col s12 m10 offset-m1 input-field" })
+          <div class="col s12 m10 offset-m1 input-field">
+             @Html.EditorFor(model => model.FechaDeCreacion_Sede, new { htmlAttributes = new { @type = "date" } })   
+             
+          </div>
+          <div class="col s12 m10 offset-m1">
+				<!--el estado solo estara disponible para edicion-->
+        <input class="filled-in" id="Estado_sede" name="Estado_sede" type="checkbox" value="true" checked>
+        @Html.LabelFor(model => model.Estado_sede)
+</div>
+
+                
+      </div>
+          <div class="col s12 m12 center-align">
+              <input type="submit" value="guardar" class="btn waves-effect" />
+          </div>
+      </div>
+
+        }
+</div>
 
 
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>sede</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.ID_Sede)
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Nombre_Sede, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Nombre_Sede, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Nombre_Sede, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Direccion_Sede, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Direccion_Sede, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Direccion_Sede, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Telefono, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Telefono, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Telefono, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.ID_Centro, "ID_Centro", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("ID_Centro", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.ID_Centro, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Estado_sede, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.Estado_sede)
-                    @Html.ValidationMessageFor(model => model.Estado_sede, "", new { @class = "text-danger" })
-                </div>
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.FechaDeCreacion_Sede, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.FechaDeCreacion_Sede, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.FechaDeCreacion_Sede, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.FechaDeInactivacion_Sede, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.FechaDeInactivacion_Sede, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.FechaDeInactivacion_Sede, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
-            </div>
-        </div>
-    </div>
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
+<div class="input-field col s12 m10 push-s1">
+    @Html.ActionLink("Listado", "Index")
 </div>
 
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>

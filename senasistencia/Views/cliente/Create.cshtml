@@ -1,136 +1,97 @@
 ﻿@model senasistencia.Models.cliente
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Crear";
 }
 
-<h2>Create</h2>
 
 
-@using (Html.BeginForm()) 
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>cliente</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.ID_DocumentoCliente, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.ID_DocumentoCliente, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.ID_DocumentoCliente, "", new { @class = "text-danger" })
-            </div>
-        </div>
+<div class="col s12 m8 push-m2 card-panel margen">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+    <div class="row formulario">
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.ID_Tipo_Documento, "ID_Tipo_Documento", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("ID_Tipo_Documento", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.ID_Tipo_Documento, "", new { @class = "text-danger" })
-            </div>
-        </div>
+    <h4 class="center-align">Cliente</h4>
+    <div class="divider"></div>
+    <div class="section">
+           
+          <div class="col s12 m5 offset-m1 input-field">
+             @Html.EditorFor(model => model.ID_DocumentoCliente, new { htmlAttributes = new { @class = "" } })   
+            @Html.LabelFor(model => model.ID_DocumentoCliente, htmlAttributes: new { @class = "" })
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.PrimerNombre_Cliente, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.PrimerNombre_Cliente, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.PrimerNombre_Cliente, "", new { @class = "text-danger" })
-            </div>
-        </div>
+          </div>
+          <div class="col s12 m5  input-field">
+              @Html.DropDownList("ID_Tipo_Documento", null, htmlAttributes: new { @class = "" })
+            @Html.LabelFor(model => model.ID_Tipo_Documento, "ID_Tipo_Documento", htmlAttributes: new { @class = "" })
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.SegundoNombre_Cliente, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.SegundoNombre_Cliente, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.SegundoNombre_Cliente, "", new { @class = "text-danger" })
-            </div>
-        </div>
+          </div>
+          <div class="col s12 m5 offset-m1 input-field">
+             @Html.EditorFor(model => model.PrimerNombre_Cliente, new { htmlAttributes = new { @class = "" } })   
+            @Html.LabelFor(model => model.PrimerNombre_Cliente, htmlAttributes: new { @class = "" })
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.PrimerApellido_Cliente, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.PrimerApellido_Cliente, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.PrimerApellido_Cliente, "", new { @class = "text-danger" })
-            </div>
-        </div>
+          </div>
+          <div class="col s12 m5  input-field">
+             @Html.EditorFor(model => model.SegundoNombre_Cliente, new { htmlAttributes = new { @class = "" } })   
+            @Html.LabelFor(model => model.SegundoNombre_Cliente, htmlAttributes: new { @class = "" })
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.SegundoApellido_Cliente, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.SegundoApellido_Cliente, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.SegundoApellido_Cliente, "", new { @class = "text-danger" })
-            </div>
-        </div>
+          </div>
+          <div class="col s12 m5 offset-m1 input-field">
+             @Html.EditorFor(model => model.PrimerApellido_Cliente, new { htmlAttributes = new { @class = "" } })   
+            @Html.LabelFor(model => model.PrimerApellido_Cliente, htmlAttributes: new { @class = "" })
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Correo_Cliente, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Correo_Cliente, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Correo_Cliente, "", new { @class = "text-danger" })
-            </div>
-        </div>
+          </div>
+          <div class="col s12 m5  input-field">
+             @Html.EditorFor(model => model.SegundoApellido_Cliente, new { htmlAttributes = new { @class = "" } })   
+            @Html.LabelFor(model => model.SegundoApellido_Cliente, htmlAttributes: new { @class = "" })
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Telefono_Cliente, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Telefono_Cliente, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Telefono_Cliente, "", new { @class = "text-danger" })
-            </div>
-        </div>
+          </div>
+          <div class="col s12 m10 offset-m1 input-field">
+             @Html.EditorFor(model => model.Correo_Cliente, new { htmlAttributes = new { @class = "" } })   
+            @Html.LabelFor(model => model.Correo_Cliente, htmlAttributes: new { @class = "" })
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.ID_Cargo, "ID_Cargo", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("ID_Cargo", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.ID_Cargo, "", new { @class = "text-danger" })
-            </div>
-        </div>
+          </div>
+          <div class="col s12 m5 offset-m1 input-field">
+             @Html.EditorFor(model => model.Telefono_Cliente, new { htmlAttributes = new { @class = "" } })   
+            @Html.LabelFor(model => model.Telefono_Cliente, htmlAttributes: new { @class = "" })
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.ID_Perfil, "ID_Perfil", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("ID_Perfil", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.ID_Perfil, "", new { @class = "text-danger" })
-            </div>
-        </div>
+          </div>
+          <div class="col s12 m5 input-field">
+            @Html.DropDownList("ID_Cargo", null, htmlAttributes: new { @class = "form-control" })
+            @Html.LabelFor(model => model.ID_Cargo, "ID_Cargo", htmlAttributes: new { @class = "" })
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Estado_Cliente, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.Estado_Cliente)
-                    @Html.ValidationMessageFor(model => model.Estado_Cliente, "", new { @class = "text-danger" })
-                </div>
-            </div>
-        </div>
+          </div>
+          <div class="col s12 m5 offset-m1 input-field">
+            @Html.DropDownList("ID_Perfil", null, htmlAttributes: new { @class = "form-control" })
+            @Html.LabelFor(model => model.ID_Perfil, "ID_Perfil", htmlAttributes: new { @class = "" })
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.FechaDeCreacion_Cliente, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.FechaDeCreacion_Cliente, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.FechaDeCreacion_Cliente, "", new { @class = "text-danger" })
-            </div>
-        </div>
+          </div>
+          <div class="col s12 m5 input-field">
+             @Html.EditorFor(model => model.FechaDeCreacion_Cliente, new { htmlAttributes = new { @type = "date" } })   
+            
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.FechaDeInactivacion_Cliente, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.FechaDeInactivacion_Cliente, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.FechaDeInactivacion_Cliente, "", new { @class = "text-danger" })
-            </div>
-        </div>
+          </div>
+          
+          
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </div>
-    </div>
-}
+				<!--el estado solo estara disponible para edicion-->
+        <input class="filled-in" id="Estado_Cliente" name="Estado_Cliente" type="checkbox" value="true" checked>
+        @Html.HiddenFor(model => model.Estado_Cliente)
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
+
+                
+      </div>
+          <div class="col s12 m12 center-align">
+              <input type="submit" value="Crear" class="btn waves-effect" />
+          </div>
+      </div>
+
+        }
+</div>
+
+
+<div class="input-field col s12 m10 push-s1">
+    @Html.ActionLink("Listado", "Index")
 </div>
 
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>

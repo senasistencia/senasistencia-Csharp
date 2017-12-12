@@ -1,80 +1,64 @@
 ﻿@model senasistencia.Models.excusa
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Crear";
 }
 
-<h2>Create</h2>
 
 
-@using (Html.BeginForm()) 
-{
-    @Html.AntiForgeryToken()
+
+<div class="col s12 m8 push-m2 card-panel margen">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+    <div class="row formulario">
+
+    <h4 class="center-align">Excusa</h4>
+    <div class="divider"></div>
+    <div class="section">
+           
+          <div class="col s12 m10 offset-m1 input-field">
+            @Html.DropDownList("ID_DocumentoAprendiz", null, htmlAttributes: new { @class = "" })  
+            @Html.LabelFor(model => model.ID_DocumentoAprendiz, "ID_DocumentoAprendiz", htmlAttributes: new { @class = "" })
+          </div>
+          @Html.LabelFor(model => model.Fecha_Excusa, htmlAttributes: new { @class = "col s12 m5 offset-m1 input-field" })
+          <div class="col s12 m10 offset-m1 input-field">
+            
+            @Html.EditorFor(model => model.Fecha_Excusa, new { htmlAttributes = new { @type = "date" } })
+  
+          </div>
+@Html.LabelFor(model => model.Periodo_Excusa, htmlAttributes: new { @class = "col s12 m5 offset-m1 input-field" })
+          <div class="col s12 m10 offset-m1 input-field">
+            
+            @Html.EditorFor(model => model.Periodo_Excusa, new { htmlAttributes = new { @type = "date" } })
     
-    <div class="form-horizontal">
-        <h4>excusa</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.ID_DocumentoAprendiz, "ID_DocumentoAprendiz", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("ID_DocumentoAprendiz", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.ID_DocumentoAprendiz, "", new { @class = "text-danger" })
-            </div>
-        </div>
+          </div>
+@Html.LabelFor(model => model.FechaDeCreacion_Excusa, htmlAttributes: new { @class = "col s12 m5 offset-m1 input-field" })
+          <div class="col s12 m10 offset-m1 input-field">             
+            
+            @Html.EditorFor(model => model.FechaDeCreacion_Excusa, new { htmlAttributes = new { @type = "date" } })   
+          </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Fecha_Excusa, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Fecha_Excusa, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Fecha_Excusa, "", new { @class = "text-danger" })
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Periodo_Excusa, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Periodo_Excusa, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Periodo_Excusa, "", new { @class = "text-danger" })
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Estado_Excusa, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.Estado_Excusa)
-                    @Html.ValidationMessageFor(model => model.Estado_Excusa, "", new { @class = "text-danger" })
-                </div>
-            </div>
-        </div>
+				<!--el estado solo estara disponible para edicion-->
+        <input class="filled-in" id="Estado_Excusa" name="Estado_Excusa" type="checkbox" value="true" checked>
+        @Html.HiddenFor(model => model.Estado_Excusa)
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.FechaDeCreacion_Excusa, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.FechaDeCreacion_Excusa, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.FechaDeCreacion_Excusa, "", new { @class = "text-danger" })
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.FechaDeInactivacion_Excusa, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.FechaDeInactivacion_Excusa, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.FechaDeInactivacion_Excusa, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                
+      </div>
+          <div class="col s12 m12 center-align">
+              <input type="submit" value="Crear" class="btn waves-effect" />
+          </div>
+      </div>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </div>
-    </div>
-}
+        }
+</div>
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
+
+<div class="input-field col s12 m10 push-s1">
+    @Html.ActionLink("Listado", "Index")
 </div>
 
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>

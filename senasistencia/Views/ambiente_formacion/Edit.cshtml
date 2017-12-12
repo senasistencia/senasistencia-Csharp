@@ -1,17 +1,16 @@
 ﻿@model senasistencia.Models.ambiente_formacion
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Editar Ambiente";
 }
 
-<h2>Editar</h2>
 <div class="col s12 m8 push-m2 card-panel margen">
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
         <div class="row formulario">
 
-            <h4 class="center-align">Ambiente de formacion</h4>
+            <h4 class="center-align">Editar - Ambiente de formacion</h4>
             <div class="divider"></div>
             <div class="section">
                 @Html.HiddenFor(model => model.ID_Ambiente)
@@ -35,7 +34,7 @@
                 </div>
             </div>
             <div class="col s12 m12 center-align">
-                <input type="submit" value="Crear" class="btn waves-effect" />
+                <input type="submit" value="Guardar" class="btn waves-effect" />
             </div>
         </div>
 

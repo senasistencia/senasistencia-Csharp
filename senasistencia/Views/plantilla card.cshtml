@@ -1,8 +1,3 @@
-﻿@model senasistencia.Models.perfil
-
-@{
-    ViewBag.Title = "Crear";
-}
 
 
 
@@ -13,22 +8,18 @@
             @Html.AntiForgeryToken()
     <div class="row formulario">
 
-    <h4 class="center-align">Perfil</h4>
+    <h4 class="center-align">titulo</h4>
     <div class="divider"></div>
     <div class="section">
            
           <div class="col s12 m10 offset-m1 input-field">
-            @Html.EditorFor(model => model.Perfil1, new { htmlAttributes = new { @class = "" } })
-            @Html.LabelFor(model => model.Perfil1, htmlAttributes: new { @class = "" })
+                
           </div>
-          @Html.LabelFor(model => model.FechaDeCreacion_Perfil, htmlAttributes: new { @class = "col s12 m10 offset-m1 input-field" })
-          <div class="col s12 m10 offset-m1 input-field">
-            @Html.EditorFor(model => model.FechaDeCreacion_Perfil, new { htmlAttributes = new { @type = "date" } })
-            
-          </div>
+          
+
 				<!--el estado solo estara disponible para edicion-->
-        <input class="filled-in" id="Estado_Perfil" name="Estado_Perfil" type="checkbox" value="true" checked>
-        @Html.HiddenFor(model => model.Estado_Perfil)
+        <input class="filled-in" id="Estado_Ambiente" name="Estado_Ambiente" type="checkbox" value="true" checked>
+        @Html.HiddenFor(model => model.Estado_Ambiente)
 
 
                 

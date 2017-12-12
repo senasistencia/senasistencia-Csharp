@@ -1,66 +1,51 @@
 ﻿@model senasistencia.Models.programa_formacion
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Crear";
 }
 
-<h2>Edit</h2>
 
 
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>programa_formacion</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.ID_Programa)
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
-            </div>
+
+<div class="col s12 m8 push-m2 card-panel margen">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+    <div class="row formulario">
+
+    <h4 class="center-align">Programa de formacion</h4>
+    <div class="divider"></div>
+    <div class="section">
+        @Html.HiddenFor(model => model.ID_Programa) 
+           
+          <div class="col s12 m10 offset-m1 input-field">
+            @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "" } })
+            @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "" })
+          </div>
+          @Html.LabelFor(model => model.FechaDeCreacion_Programa, htmlAttributes: new { @class = "col s12 m10 offset-m1 input-field" })
+          <div class="col s12 m10 offset-m1 input-field">
+            @Html.EditorFor(model => model.FechaDeCreacion_Programa, new { htmlAttributes = new { @type = "date" } })
+          </div>
+          <div class="col s12 m10 offset-m1 ">
+				<!--el estado solo estara disponible para edicion-->
+        <input class="filled-in" id="Estado_Programa" name="Estado_Programa" type="checkbox" value="true" checked>
+        @Html.LabelFor(model => model.Estado_Programa)
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Estado_Programa, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.Estado_Programa)
-                    @Html.ValidationMessageFor(model => model.Estado_Programa, "", new { @class = "text-danger" })
-                </div>
-            </div>
-        </div>
+                
+      </div>
+          <div class="col s12 m12 center-align">
+              <input type="submit" value="Crear" class="btn waves-effect" />
+          </div>
+      </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.FechaDeCreacion_Programa, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.FechaDeCreacion_Programa, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.FechaDeCreacion_Programa, "", new { @class = "text-danger" })
-            </div>
-        </div>
+        }
+</div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.FechaDeInactivacion_Programa, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.FechaDeInactivacion_Programa, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.FechaDeInactivacion_Programa, "", new { @class = "text-danger" })
-            </div>
-        </div>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
-            </div>
-        </div>
-    </div>
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
+<div class="input-field col s12 m10 push-s1">
+    @Html.ActionLink("Listado", "Index")
 </div>
 
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>
