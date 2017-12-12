@@ -19,6 +19,7 @@ namespace senasistencia.Models
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Display(Name = "Numero de Identificacion")]
         public long ID_DocumentoAprendiz { get; set; }
 
         public long ID_Tipo_Documento { get; set; }

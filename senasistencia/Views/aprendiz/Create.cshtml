@@ -4,6 +4,7 @@
     ViewBag.Title = "Crear-Aprendiz";
 }
 
+<<<<<<< HEAD
 
 <div class="col s12 m8 push-m2 card-panel margen">
         @using (Html.BeginForm())
@@ -77,8 +78,96 @@
 
 <div class="input-field col s12 m10 push-s1">
     @Html.ActionLink("Listado", "Index")
-</div>
+=======
+<div class="col s12 m8 push-m2 card-panel margen">
 
-<script src="~/Scripts/jquery-1.10.2.min.js"></script>
-<script src="~/Scripts/jquery.validate.min.js"></script>
-<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+@using (Html.BeginForm())
+{
+        @Html.AntiForgeryToken()
+<div class="row formulario">
+		
+            <h4 class="center-align">Aprendiz</h4>
+            <div class="divider"></div>
+<div class="section">
+            <div class="col s12 m6 input-field">
+                
+                @Html.EditorFor(model => model.ID_DocumentoAprendiz, new { htmlAttributes = new { @class = "" } })
+                @Html.LabelFor(model => model.ID_DocumentoAprendiz, htmlAttributes: new { @class = "" })
+    
+            </div>
+
+            <div class="col s12 m6 input-field">
+                
+              	@Html.DropDownList("ID_Tipo_Documento", null, htmlAttributes: new { @class = "" })
+                @Html.LabelFor(model => model.ID_Tipo_Documento, "ID_Tipo_Documento", htmlAttributes: new { @class = "" })
+    
+            </div>
+
+            <div class="col s12 m6 input-field">
+                
+                @Html.EditorFor(model => model.Nombre_Aprendiz, new { htmlAttributes = new { @class = "" } })
+                @Html.LabelFor(model => model.Nombre_Aprendiz, htmlAttributes: new { @class = "" })
+
+            </div>
+
+            <div class="col s12 m6 input-field">
+                
+                    @Html.EditorFor(model => model.Apellido_Aprendiiz, new { htmlAttributes = new { @class = "" } })
+                @Html.LabelFor(model => model.Apellido_Aprendiiz, htmlAttributes: new { @class = "" })
+
+            </div>
+
+            <div class="col s12 m6 input-field">
+                
+                    @Html.EditorFor(model => model.Correo_Aprendiz, new { htmlAttributes = new { @class = "" } })
+                @Html.LabelFor(model => model.Correo_Aprendiz, htmlAttributes: new { @class = "" })
+
+            </div>
+
+            <div class="col s12 m6 input-field">
+                
+                    @Html.EditorFor(model => model.Telefono_Aprendiz, new { htmlAttributes = new { @class = "" } })
+                @Html.LabelFor(model => model.Telefono_Aprendiz, htmlAttributes: new { @class = "" })
+
+            </div>
+
+            <div class="col s12 m6 input-field">
+                
+                    @Html.DropDownList("ID_Ficha", null, htmlAttributes: new { @class = "" })
+                @Html.LabelFor(model => model.ID_Ficha, "ID_Ficha", htmlAttributes: new { @class = "" })
+
+            </div>
+
+            <div class="col s12 m6 ">
+
+                
+                <input class="filled-in" data-val="true" data-val-required="El campo Estado Aprendiz es obligatorio." id="Estado_Aprendiz" name="Estado_Aprendiz" type="checkbox" value="true" checked>
+                @Html.HiddenFor(model => model.Estado_Aprendiz, htmlAttributes: new { @class = "" })
+          	</div>
+          
+
+            <div class="col s12 m6 input-field">
+                
+                    @Html.EditorFor(model => model.FechaDeCreacion_Aprendiz, new { htmlAttributes = new { @type = "date" } })
+                
+
+            </div>
+
+</div>
+            <div class="col s12 center-align input-field">
+                
+                    <input type="submit" value="Crear" class="btn btn-default" />
+            </div>
+        </div>
+
+    }
+
+>>>>>>> 6a31e7e17797926084d397515887ddb967bbd65a
+</div>
+    <div class="col s12 m6 input-field">
+        @Html.ActionLink("Listado", "Index")
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

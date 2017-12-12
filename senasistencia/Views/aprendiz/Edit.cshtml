@@ -1,6 +1,7 @@
 ﻿@model senasistencia.Models.aprendiz
 
 @{
+<<<<<<< HEAD
     ViewBag.Title = "Editar";
 }
 
@@ -78,6 +79,98 @@
 
 <div class="input-field col s12 m10 push-s1">
     @Html.ActionLink("Listado", "Index")
+=======
+ViewBag.Title = "Edit";
+}
+<div class="col s12 m8 push-m2 card-panel margen">
+
+@using (Html.BeginForm())
+{
+		@Html.AntiForgeryToken()
+<div class="row formulario">
+
+				<h4 class="center-align">Aprendiz</h4>
+				<div class="divider"></div>
+<div class="section">
+@Html.HiddenFor(model => model.ID_DocumentoAprendiz)
+				<div class="col s12 m6 input-field">
+						
+						@Html.EditorFor(model => model.ID_DocumentoAprendiz, new { htmlAttributes = new { @class = "" } })
+						@Html.LabelFor(model => model.ID_DocumentoAprendiz, htmlAttributes: new { @class = "" })
+
+				</div>
+
+				<div class="col s12 m6 input-field">
+						
+						@Html.DropDownList("ID_Tipo_Documento", null, htmlAttributes: new { @class = "" })
+						@Html.LabelFor(model => model.ID_Tipo_Documento, "ID_Tipo_Documento", htmlAttributes: new { @class = "" })
+
+				</div>
+
+				<div class="col s12 m6 input-field">
+						
+						@Html.EditorFor(model => model.Nombre_Aprendiz, new { htmlAttributes = new { @class = "" } })
+						@Html.LabelFor(model => model.Nombre_Aprendiz, htmlAttributes: new { @class = "" })
+
+				</div>
+
+				<div class="col s12 m6 input-field">
+						
+								@Html.EditorFor(model => model.Apellido_Aprendiiz, new { htmlAttributes = new { @class = "" } })
+						@Html.LabelFor(model => model.Apellido_Aprendiiz, htmlAttributes: new { @class = "" })
+
+				</div>
+
+				<div class="col s12 m6 input-field">
+						
+								@Html.EditorFor(model => model.Correo_Aprendiz, new { htmlAttributes = new { @class = "" } })
+						@Html.LabelFor(model => model.Correo_Aprendiz, htmlAttributes: new { @class = "" })
+
+				</div>
+
+				<div class="col s12 m6 input-field">
+						
+								@Html.EditorFor(model => model.Telefono_Aprendiz, new { htmlAttributes = new { @class = "" } })
+						@Html.LabelFor(model => model.Telefono_Aprendiz, htmlAttributes: new { @class = "" })
+
+				</div>
+
+				<div class="col s12 m6 input-field">
+						
+								@Html.DropDownList("ID_Ficha", null, htmlAttributes: new { @class = "" })
+						@Html.LabelFor(model => model.ID_Ficha, "ID_Ficha", htmlAttributes: new { @class = "" })
+
+				</div>
+
+				<div class="col s12 m6 ">
+
+						
+						<input class="filled-in" data-val="true" data-val-required="El campo Estado Aprendiz es obligatorio." id="Estado_Aprendiz" name="Estado_Aprendiz" type="checkbox" value="true" checked>
+						@Html.LabelFor(model => model.Estado_Aprendiz, htmlAttributes: new { @class = "" })
+				</div>
+			
+
+				<div class="col s12 m6 input-field">
+						
+								@Html.EditorFor(model => model.FechaDeCreacion_Aprendiz, new { htmlAttributes = new { @type = "date" } })
+						
+
+				</div>
+
+</div>
+				<div class="col s12 center-align input-field">
+						
+								<input type="submit" value="Guardar" class="btn btn-default" />
+				</div>
+		</div>
+
+}
+
+</div>
+
+<div>
+@Html.ActionLink("Listado", "Index")
+>>>>>>> 6a31e7e17797926084d397515887ddb967bbd65a
 </div>
 
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>
